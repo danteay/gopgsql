@@ -54,7 +54,7 @@ if errQuery != nil {
 }
 ```
 
-Helt check of the pool connection
+Healt check of the pool connection
 
 ```go
 log.Println("==>> State: ", pool.State())
