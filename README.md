@@ -1,12 +1,9 @@
-# pgsqlcp
+# gopgsql
 
 ## Install
 
-Complete the [prerequisites](https://github.com/compropago/gomodules/blob/master/README.md) before install the module.
-After, you have to execute the next command:
-
 ```bash
-go get -u -v github.com/compropago/gomodules/pgsqlcp
+go get -u -v github.com/danteay/gopgsql
 ```
 
 And import in your files whit the next lines:
@@ -14,7 +11,7 @@ And import in your files whit the next lines:
 ```go
 import (
   "database/sql"
-  "github.com/compropago/gomodules/pgsqlcp"
+  "github.com/danteay/gopgsql"
 )
 ```
 
@@ -24,7 +21,7 @@ Setup config for circut and recover strategies
 
 ```go
 conf := pgsqlcp.PgOptions{
-  Url:        "postgres://devusername:devpassword@dev-postgres.cjuxp0rkz2bd.us-west-2.rds.amazonaws.com:5432/msreceipts",
+  Url:        "postgres://localhost:5432/postgres",
   Poolsize:   10,
   FailRate:   0.25,
   Regenerate: time.Second * 5,
