@@ -20,7 +20,7 @@ import (
 Setup config for circut and recover strategies
 
 ```go
-conf := pgsqlcp.PgOptions{
+conf := gopgsql.PgOptions{
   Url:        "postgres://localhost:5432/postgres",
   Poolsize:   10,
   FailRate:   0.25,
@@ -32,7 +32,7 @@ conf := pgsqlcp.PgOptions{
 Init connection pool
 
 ```go
-pool, err := pgsqlcp.InitPool(conf)
+pool, err := gopgsql.InitPool(conf)
 
 if err != nil {
   log.Println(err)
